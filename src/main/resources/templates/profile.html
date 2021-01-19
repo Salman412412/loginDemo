@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Page!</title>
+</head>
+<body>
+<p th:if="${Message != null}" th:text="${Message}"></p>
+<form action="/update">
+    <table>
+        <tr>
+            <td>
+                Id:
+            </td>
+            <td>
+                <label>
+                    <input type="text" th:value="${user.getId()}" name="id" readonly>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Username:
+            </td>
+            <td>
+                <label>
+                    <input type="text" th:value="${user.getUsername()}" name="username">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <label>
+                    <input type="text" th:value="${user.getPassword()}" name="password">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <label>
+                    <input type="text" th:value="${user.getName()}" name="name">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Family:
+            </td>
+            <td>
+                <label>
+                    <input type="text" th:value="${user.getFamily()}" name="family">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Address:
+            </td>
+            <td>
+                <label>
+                    <input type="text" th:value="${user.getAddress()}" name="address">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="right">
+                <input type="submit" value="Update">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
